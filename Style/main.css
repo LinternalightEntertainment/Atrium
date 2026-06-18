@@ -1,0 +1,30 @@
+body {
+    background-color:black;
+    color: white;
+    margin: 0;
+}
+
+.IMG_Header {
+    width: 100vw;
+    height: 30vh;
+}
+
+.But_Header_Div {
+    top:30vw;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.But_Header {
+    position: absolute;
+    text-decoration: none;
+    align-self: center;
+    background-color: black;
+    border: 0;
+    color: white;
+    height: 5vh;
+    font-size: 5vw;
+    cursor: pointer;
+}
