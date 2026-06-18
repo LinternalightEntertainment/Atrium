@@ -1,15 +1,130 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <link rel="StyleSheet" href="./Style/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+    </style>
 </head>
-<body>
+<body class="bg-gray-900 text-gray-100 font-sans">
 
-<div class="IMG_Header">
-    <img src="./GFX/Header.png" style="width: 100vw;">
-</div>
-<div class="But_Header_Div">
-    <button class="But_Header">Click to Enter</button>
-</div>
+    <nav class="fixed top-0 left-0 w-full bg-gray-950/80 backdrop-blur-md z-50 border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-indigo-400 tracking-wider">GAME DEV PORTFOLIO</a>
+            <div class="space-x-6">
+                <a href="#about" class="hover:text-indigo-400 transition">ข้อมูลส่วนตัว</a>
+                <a href="#games" class="hover:text-indigo-400 transition">ผลงานเกม</a>
+                <a href="#gallery" class="hover:text-indigo-400 transition">แกลเลอรีโมเดล</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about" class="pt-32 pb-20 px-4 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+        <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-indigo-500 shadow-lg shadow-indigo-500/20 flex-shrink-0">
+            <img src="https://via.placeholder.com/300" alt="Profile Picture" class="w-full h-full object-cover">
+        </div>
+        <div class="flex-1 text-center md:text-left">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">สวัสดีครับ! ผมคือ <span class="text-indigo-400">นักพัฒนาเกม</span></h1>
+            <p class="text-gray-400 text-lg mb-6 leading-relaxed">
+                ยินดีต้อนรับสู่พื้นที่รวบรวมผลงานของผม ผมมีความหลงใหลในการสร้างสรรค์โลกในวิดีโอเกม 
+                การออกแบบระบบ และการปั้นโมเดล 3 มิติ เชี่ยวชาญการใช้เครื่องมือและเอนจินพัฒนาเกมระดับสากล
+            </p>
+            <div class="flex flex-wrap justify-center md:justify-start gap-2 mb-6">
+                <span class="bg-gray-800 text-indigo-300 px-3 py-1 rounded-full text-sm font-medium">Unreal Engine</span>
+                <span class="bg-gray-800 text-indigo-300 px-3 py-1 rounded-full text-sm font-medium">C++ / Blueprint</span>
+                <span class="bg-gray-800 text-indigo-300 px-3 py-1 rounded-full text-sm font-medium">3D Modeling</span>
+                <span class="bg-gray-800 text-indigo-300 px-3 py-1 rounded-full text-sm font-medium">Game Design</span>
+            </div>
+            <div class="text-gray-400 text-sm">
+                <p>📧 Email: your.email@example.com</p>
+                <p>🌐 GitHub / ArtStation: @yourusername</p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="border-gray-800 max-w-6xl mx-auto">
+
+    <section id="games" class="py-20 px-4 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-12 text-center md:text-left border-l-4 border-indigo-500 pl-4">ผลงานการพัฒนาเกม</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-gray-950 rounded-xl overflow-hidden border border-gray-800 hover:border-indigo-500/50 transition duration-300 group">
+                <div class="h-48 bg-gray-800 overflow-hidden">
+                    <img src="https://via.placeholder.com/600x400" alt="Game Project 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-6">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-indigo-400">Action / RPG</span>
+                    <h3 class="text-xl font-bold mt-1 mb-2">ชื่อโครงการเกมที่ 1</h3>
+                    <p class="text-gray-400 text-sm mb-4">
+                        คำอธิบายสั้นๆ เกี่ยวกับเกมของคุณ เช่น ระบบการเล่น ไฮไลท์เด่นๆ ที่คุณทำ (เช่น ระบบต่อสู้, AI ศัตรู หรือการทำ Level Design)
+                    </p>
+                    <div class="text-xs text-gray-500 mb-4">Engine: Unreal Engine 5</div>
+                    <a href="#" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm px-4 py-2 rounded transition">ดูรายละเอียด / เล่นเกม</a>
+                </div>
+            </div>
+
+            <div class="bg-gray-950 rounded-xl overflow-hidden border border-gray-800 hover:border-indigo-500/50 transition duration-300 group">
+                <div class="h-48 bg-gray-800 overflow-hidden">
+                    <img src="https://via.placeholder.com/600x400" alt="Game Project 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="p-6">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-indigo-400">Puzzle / Simulation</span>
+                    <h3 class="text-xl font-bold mt-1 mb-2">ชื่อโครงการเกมที่ 2</h3>
+                    <p class="text-gray-400 text-sm mb-4">
+                        รายละเอียดของเกมที่สอง คุณอาจจะเน้นเรื่องกลไกการเล่น (Mechanics) หรือความท้าทายในการเขียนโค้ดที่คุณแก้ปัญหาได้
+                    </p>
+                    <div class="text-xs text-gray-500 mb-4">Engine: Unity / UE5</div>
+                    <a href="#" class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium text-sm px-4 py-2 rounded transition">ดูรายละเอียด / เล่นเกม</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="border-gray-800 max-w-6xl mx-auto">
+
+    <section id="gallery" class="py-20 px-4 max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold mb-4 text-center md:text-left border-l-4 border-indigo-500 pl-4">แกลเลอรีโมเดลวิดีโอเกม</h2>
+        <p class="text-gray-400 mb-12 text-center md:text-left">รวมภาพผลงาน 3D Assets, Characters และ Environment ที่ใช้ในเกม</p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <div class="bg-gray-950 p-2 rounded-lg border border-gray-800 group hover:border-gray-700 transition">
+                <div class="aspect-square bg-gray-800 rounded overflow-hidden mb-2">
+                    <img src="https://via.placeholder.com/400" alt="Model 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="px-2 py-1">
+                    <h4 class="font-medium text-sm text-gray-200">Character: ตัวละครหลัก</h4>
+                    <p class="text-xs text-gray-500">ZBrush / Blender (20k Tris)</p>
+                </div>
+            </div>
+
+            <div class="bg-gray-950 p-2 rounded-lg border border-gray-800 group hover:border-gray-700 transition">
+                <div class="aspect-square bg-gray-800 rounded overflow-hidden mb-2">
+                    <img src="https://via.placeholder.com/400" alt="Model 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="px-2 py-1">
+                    <h4 class="font-medium text-sm text-gray-200">Weapon: ดาบเลเซอร์</h4>
+                    <p class="text-xs text-gray-500">Substance Painter / Maya</p>
+                </div>
+            </div>
+
+            <div class="bg-gray-950 p-2 rounded-lg border border-gray-800 group hover:border-gray-700 transition">
+                <div class="aspect-square bg-gray-800 rounded overflow-hidden mb-2">
+                    <img src="https://via.placeholder.com/400" alt="Model 3" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="px-2 py-1">
+                    <h4 class="font-medium text-sm text-gray-200">Environment: เสาหินโบราณ</h4>
+                    <p class="text-xs text-gray-500">Modular Asset for Environment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-950 border-t border-gray-800 py-8 text-center text-sm text-gray-500">
+        <p>&copy; 2026 Your Name. All rights reserved. Created for Game Dev Portfolio.</p>
+    </footer>
+
 </body>
 </html>
