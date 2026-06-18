@@ -1,30 +1,428 @@
-body {
-    background-color:black;
-    color: white;
+/* การตั้งค่าพื้นฐานของหน้าเว็บ */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.IMG_Header {
-    width: 100vw;
-    height: 30vh;
+html {
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.But_Header_Div {
-    top:30vw;
-    width: 100vw;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
+body {
+    background-color: #111827; /* เทาเข้มมาก */
+    color: #f3f4f6; /* ขาวนวล */
+    line-height: 1.6;
 }
 
-.But_Header {
-    position: absolute;
+a {
     text-decoration: none;
-    align-self: center;
-    background-color: black;
-    border: 0;
-    color: white;
-    height: 5vh;
-    font-size: 5vw;
-    cursor: pointer;
+    color: inherit;
+}
+
+/* ส่วนของ Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(3, 7, 18, 0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #1f2937;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #818cf8; /* สี Indigo */
+    letter-spacing: 0.05em;
+}
+
+.nav-links a {
+    margin-left: 24px;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #818cf8;
+}
+
+/* ส่วนของข้อมูลส่วนตัว (About Section) */
+.about-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 140px 20px 80px 20px;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+}
+
+/* ใช้ Media Query สำหรับจัดรูปแบบเวลาเปิดในคอมพิวเตอร์ (หน้าจอใหญ่กว่า 768px) */
+@media (min-width: 768px) {
+    .profile-container {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
+.profile-img-box {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #6366f1;
+    box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.3);
+    flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    .profile-img-box {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+.profile-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-text {
+    flex-1;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .profile-text {
+        text-align: left;
+    }
+}
+
+.profile-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+    font-weight: 800;
+}
+
+.highlight {
+    color: #818cf8;
+}
+
+.profile-text p {
+    color: #9ca3af;
+    font-size: 1.125rem;
+    margin-bottom: 24px;
+    max-width: 700px;
+}
+
+/* Tags ทักษะ */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+    .skills-container {
+        justify-content: flex-start;
+    }
+}
+
+.skill-tag {
+    background-color: #1f2937;
+    color: #c7d2fe;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.contact-info {
+    color: #9ca3af;
+    font-size: 0.875rem;
+}
+
+/* เส้นคั่นส่วน */
+.divider {
+    border-bottom: 1px solid #1f2937;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ส่วนคุมพื้นที่แถบสไลด์ */
+.ticker-section {
+    width: 100%;
+    overflow: hidden; /* ซ่อนส่วนที่เลยหน้าจอออกไป */
+    background-color: #030712; /* สีพื้นหลังเข้มๆ */
+    padding: 24px 0;
+    border-top: 1px solid #1f2937;
+    border-bottom: 1px solid #1f2937;
+}
+
+/* ตัวครอบแถบวิ่ง จัดการให้วิ่งเป็นแนวนอนและติดกัน */
+.ticker-wrapper {
+    display: flex;
+    width: max-content;
+}
+
+/* แทร็กสำหรับวิ่ง ทำแอนิเมชันสไลด์ไปทางซ้าย */
+.ticker-track {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* ระยะห่างระหว่างกล่องข้อความ */
+    padding-right: 40px; /* ต้องเท่ากับ gap เพื่อให้รอยต่อเนียน */
+    animation: scroll-left 20s linear infinite; /* 20s คือความเร็ว ยิ่งน้อยยิ่งวิ่งเร็ว */
+}
+
+/* กล่องข้อความ+โลโก้แต่ละตัว */
+.ticker-item {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* ระยะห่างระหว่างภาพกับตัวอักษร */
+    background-color: #1f2937; /* สีพื้นหลังกล่อง */
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #374151;
+    white-space: nowrap; /* ห้ามตัวหนังสือขึ้นบรรทัดใหม่ */
+}
+
+/* ขนาดของโลโก้ */
+.ticker-item img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* ฟอนต์ชื่อโปรแกรม */
+.ticker-item span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #e5e7eb;
+}
+
+/* สั่งให้หยุดวิ่งเวลาผู้ใช้งานเอาเมาส์ไปชี้ (จะดูเป็นมิตรและอ่านง่ายขึ้น) */
+.ticker-wrapper:hover .ticker-track {
+    animation-play-state: paused;
+}
+
+/* ลอจิกการเคลื่อนที่ (เคลื่อนไปทางซ้าย 100% ของตัวมันเอง) */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* ส่วนหัวข้อหลักของแชงก์ชัน */
+.section-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 48px;
+    border-left: 4px solid #6366f1;
+    padding-left: 16px;
+}
+
+/* ผลงานเกม (Games Section) */
+.games-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+
+@media (min-width: 768px) {
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.game-card {
+    background-color: #030712;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #1f2937;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.game-card:hover {
+    /*
+    transform: translateY(-5px);
+    */
+    border-color: rgba(99, 102, 241, 0.5);
+}
+
+.game-img-box {
+    height: 200px;
+    background-color: #1f2937;
+    overflow: hidden;
+}
+
+.game-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.game-card:hover .game-img-box img {
+    transform: scale(1.05);
+}
+
+.game-info {
+    padding: 24px;
+}
+
+.game-genre {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #818cf8;
+    letter-spacing: 0.05em;
+}
+
+.game-info h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 4px 0 8px 0;
+}
+
+.game-info p {
+    color: #9ca3af;
+    font-size: 0.875rem;
+    margin-bottom: 16px;
+}
+
+.game-engine {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-bottom: 16px;
+}
+
+/* ปุ่มกด */
+.btn {
+    display: inline-block;
+    background-color: #4f46e5;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 0.875rem;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #4338ca;
+}
+
+/* ส่วนแกลเลอรี (Gallery Section) */
+.gallery-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+.section-subtitle {
+    color: #9ca3af;
+    margin-top: -36px;
+    margin-bottom: 48px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+@media (min-width: 640px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.gallery-item {
+    background-color: #030712;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #1f2937;
+    transition: border-color 0.2s;
+}
+
+.gallery-item:hover {
+    border-color: #4b5563;
+}
+
+.gallery-img-box {
+    aspect-ratio: 1 / 1;
+    background-color: #1f2937;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.gallery-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.gallery-item:hover .gallery-img-box img {
+    transform: scale(1.05);
+}
+
+.gallery-desc {
+    padding: 4px 8px;
+}
+
+.gallery-desc h4 {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #e5e7eb;
+}
+
+.gallery-desc p {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+/* Footer ส่วนท้ายเว็บ */
+.footer {
+    background-color: #030712;
+    border-top: 1px solid #1f2937;
+    padding: 32px 20px;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #6b7280;
 }
