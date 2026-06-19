@@ -268,19 +268,45 @@ a {
     overflow: hidden;
     border: 1px solid #1f2937;
     transition: transform 0.3s, border-color 0.3s;
+    /*
+    background-image: url("../GFX/Box-ongoing.webp");
+    */
 }
 
 .game-card:hover {
     /*
     transform: translateY(-5px);
     */
-    border-color: rgba(99, 102, 241, 0.5);
+    border-color: rgba(99, 102, 241, 1);
 }
 
 .game-img-box {
     height: 200px;
     background-color: #1f2937;
     overflow: hidden;
+}
+
+.game-ongoing-box {
+    height: 40px;
+    background-color: yellow;
+    overflow: hidden;
+}
+
+#game-ongoing-box {
+    background-image: url("../GFX/Box-ongoing.webp");
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#game-onworking-box {
+    background-color: #030712;
+}
+
+.game-ongoing-box-bottom {
+    height: 40px;
+    background-color: yellow;
+    overflow: hidden;
+    margin-top: auto;
 }
 
 .game-img-box img {
