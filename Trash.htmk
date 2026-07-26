@@ -1,0 +1,40 @@
+    <section id="gallery" class="gallery-section">
+        <h2 class="section-title">แกลเลอรีโมเดลวิดีโอเกม</h2>
+        <p class="section-subtitle">รวมภาพผลงาน 3D Assets, Characters และ Environment ที่ใช้ในเกม</p>
+        
+        <div class="gallery-grid">
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+    function renderDevLogs() {
+    const container = document.getElementById('devlog-container-link-toScript');
+    
+    container.innerHTML = ''; 
+
+    devlogData.slice(0, 2).forEach(post => {
+        const cardHTML = `
+            <div class="DevLog-card">
+                <div class="game-img-box">
+                    <img src="${post.picture}" alt="${post.title}">
+                </div>
+                <div class="game-info">
+                    <h3>${post.title}</h3>
+                    <p>${post.content}</p>
+                    <a href="#" class="btn shadow-btn" style="margin-top: 20px; margin-left: auto; display: block; width: fit-content;">อ่านเพิ่มเติม</a>
+                </div>
+            </div>
+        `;
+        
+        container.innerHTML += cardHTML;
+    });
+}
+
+renderDevLogs();

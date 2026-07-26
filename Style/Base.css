@@ -1,0 +1,29 @@
+/* การตั้งค่าพื้นฐานของหน้าเว็บ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #111827; /* เทาเข้มมาก */
+    color: #f3f4f6; /* ขาวนวล */
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* เส้นคั่นส่วน */
+.divider {
+    border-bottom: 1px solid #1f2937;
+    max-width: 1200px;
+    margin: 0 auto;
+}

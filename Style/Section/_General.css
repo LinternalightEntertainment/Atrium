@@ -1,0 +1,81 @@
+.section-title {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 48px;
+    border-left: 4px solid #6366f1;
+    padding-left: 16px;
+}
+
+/* ปุ่มกด */
+.btn {
+    display: inline-block;
+    background-color: #4f46e5;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 0.875rem;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    background-color: #4338ca;
+}
+
+.section-subtitle {
+    color: #9ca3af;
+    margin-top: -36px;
+    margin-bottom: 48px;
+}
+
+.MainA-section {
+    max-width: 94vw;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+/* ใช้แสดงภาพแบบไม่มีขอบ */
+.CardA-card {
+    background-color: #030712;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 3px solid #1f2937;
+    transition: border-color 0.2s;
+}
+
+/* ใช้แสดงภาพแบบมีขอบ */
+.CardB-card { 
+    background-color: #030712;
+    padding: 8px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 3px solid #1f2937;
+    transition: border-color 0.2s;
+}
+
+.CardA-card:hover ,.CardB-card:hover {
+    border-color: rgba(99, 102, 241, 1);
+    transform: scale(1);
+}
+
+.Card-info-text {
+    padding: 24px;
+}
+
+.Card-info-text p {
+    color: #9ca3af;
+    font-size: 0.875rem;
+    margin-bottom: 16px;
+}
+
+.Card-info-text h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 4px 0 8px 0;
+}
+
+.Card-info-text h4 {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #e5e7eb;
+}

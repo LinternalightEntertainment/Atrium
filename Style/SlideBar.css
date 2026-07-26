@@ -1,0 +1,65 @@
+/* ส่วนคุมพื้นที่แถบสไลด์ */
+.ticker-section {
+    width: 100%;
+    overflow: hidden; /* ซ่อนส่วนที่เลยหน้าจอออกไป */
+    background-color: #030712; /* สีพื้นหลังเข้มๆ */
+    padding: 24px 0;
+    border-top: 1px solid #1f2937;
+    border-bottom: 1px solid #1f2937;
+}
+
+/* ตัวครอบแถบวิ่ง จัดการให้วิ่งเป็นแนวนอนและติดกัน */
+.ticker-wrapper {
+    display: flex;
+    width: max-content;
+}
+
+/* แทร็กสำหรับวิ่ง ทำแอนิเมชันสไลด์ไปทางซ้าย */
+.ticker-track {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* ระยะห่างระหว่างกล่องข้อความ */
+    padding-right: 40px; /* ต้องเท่ากับ gap เพื่อให้รอยต่อเนียน */
+    animation: scroll-left 20s linear infinite; /* 20s คือความเร็ว ยิ่งน้อยยิ่งวิ่งเร็ว */
+}
+
+/* กล่องข้อความ+โลโก้แต่ละตัว */
+.ticker-item {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* ระยะห่างระหว่างภาพกับตัวอักษร */
+    background-color: #1f2937; /* สีพื้นหลังกล่อง */
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: 1px solid #374151;
+    white-space: nowrap; /* ห้ามตัวหนังสือขึ้นบรรทัดใหม่ */
+}
+
+/* ขนาดของโลโก้ */
+.ticker-item img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* ฟอนต์ชื่อโปรแกรม */
+.ticker-item span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #e5e7eb;
+}
+
+/* สั่งให้หยุดวิ่งเวลาผู้ใช้งานเอาเมาส์ไปชี้ (จะดูเป็นมิตรและอ่านง่ายขึ้น) */
+.ticker-wrapper:hover .ticker-track {
+    animation-play-state: paused;
+}
+
+/* ลอจิกการเคลื่อนที่ (เคลื่อนไปทางซ้าย 100% ของตัวมันเอง) */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
