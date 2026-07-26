@@ -1,14 +1,14 @@
-@import "Base.css";
+@import "./Base.css";
 
-/* 1. ดึงไฟล์ที่อยู่ระดับเดียวกัน (อยู่ในโฟลเดอร์ Style เหมือนกัน) */
-@import "AboutSection.css";
-@import "Footer.css";
-@import "Grid.css";
-@import "NavBar.css";
-@import "SlideBar.css";
+/* 1. ดึงไฟล์ที่อยู่ระดับเดียวกัน */
+@import "./AboutSection.css";
+@import "./Footer.css";
+@import "./Grid.css";
+@import "./NavBar.css";
+@import "./SlideBar.css";
 
 /* 2. ดึงไฟล์ที่อยู่ในโฟลเดอร์ย่อย Section */
-@import "Section/_General.css";
-@import "Section/1_Game.css";
-@import "Section/2_Gallery.css";
-@import "Section/3_DevLog.css";
+@import "./Section/_General.css";
+@import "./Section/1_Game.css";
+@import "./Section/2_Gallery.css";
+@import "./Section/3_DevLog.css";
