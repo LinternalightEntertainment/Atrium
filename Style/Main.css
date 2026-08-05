@@ -6,7 +6,7 @@
 @import "./NavBar.css";
 @import "./SlideBar.css";
 
-@import "./Section/_General.css";
+@import "./Section/General.css";
 @import "./Section/1_Game.css";
 @import "./Section/2_Gallery.css";
 @import "./Section/3_DevLog.css";
