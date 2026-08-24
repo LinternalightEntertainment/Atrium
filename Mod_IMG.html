@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linternalight's Art Gallery</title>
+    <link rel="stylesheet" href="./Style/Main.css">
+    <link rel="icon" type="image/png" href="./GFX/L.png">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="./index.html" class="nav-logo">LINTERNALIGHT ENTERTAINMENT</a>
+            <div class="nav-links">
+                <a href="./index.html">Back to Atrium</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="DevLog" class="MainA-section">
+        <h2 class="section-title">Development Logs</h2>
+        <p class="section-subtitle">พื้นที่สำหรับการโพสต์ถึงการพัฒนาเกมที่เกิดขึ้น</p>
+        
+        <div class="DevLog-grid" id="devlog-container-link-toScript"></div>
+
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Linternalight Entertainment. All rights reserved. Created for Linternalight Entertainment.</p>
+    </footer>
+
+</body>
+
+<script src="./Mod_Image.js"></script>
+
+<script>
+    function renderMod_Image() {
+        const container = document.getElementById(
+            'devlog-container-link-toScript'
+        );
+
+        container.innerHTML = '';
+
+        Mod_Image_Data.forEach(post => {
+            container.innerHTML += `
+                <div class="DevLog-card">
+                    <div class="DevLog-img">
+                        <img src="${post.picture}">
+                    </div>
+                </div>
+            `;
+        });
+    }
+
+    renderMod_Image();
+</script>
+
+</html>
