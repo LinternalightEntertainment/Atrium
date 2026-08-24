@@ -17,5 +17,14 @@ const Mod_Image_Data = [
     {
         picture: "./GFX/Mod/ShinsRobotics_TraitsOccupation.png"
     },
+    {
+        picture: "./GFX/Mod/Occupation_FredbearsEmployee.png"
+    },
+    {
+        picture: "./GFX/Mod/Occupation_FredbearsSecurityGuard.png"
+    },
+    {
+        picture: "./GFX/Mod/Occupation_FredbearsTechnician.png"
+    },
 
 ];
