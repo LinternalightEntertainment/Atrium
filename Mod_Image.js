@@ -26,5 +26,8 @@ const Mod_Image_Data = [
     {
         picture: "./GFX/Mod/Occupation_FredbearsTechnician.png"
     },
+    {
+        picture: "./GFX/Mod/Poster_TO_NoSpawn_600.png"
+    },
 
 ];
