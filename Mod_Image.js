@@ -29,5 +29,8 @@ const Mod_Image_Data = [
     {
         picture: "./GFX/Mod/Poster_TO_NoSpawn_600.png"
     },
+    {
+        picture: "./GFX/Mod/Recipe_Fredbear.png"
+    },
 
 ];
