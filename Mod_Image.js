@@ -32,5 +32,8 @@ const Mod_Image_Data = [
     {
         picture: "./GFX/Mod/Recipe_Fredbear.png"
     },
+    {
+        picture: "./GFX/Mod/WIP_1.png"
+    },
 
 ];
