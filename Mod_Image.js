@@ -33,7 +33,7 @@ const Mod_Image_Data = [
         picture: "./GFX/Mod/Recipe_Fredbear.png"
     },
     {
-        picture: "./GFX/Mod/WIP_1.png"
+        picture: "./GFX/Mod/Spoiler_1.png"
     },
 
 ];
