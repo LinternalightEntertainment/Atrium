@@ -37,6 +37,9 @@ const Mod_Image_Data = [
     },
     {
         picture: "./GFX/Mod/Recipe_Unwithered_Foxy.png"
+    },
+    {
+        picture: "./GFX/Mod/Anim_Toy_Series.png"
     }
 
 ];
