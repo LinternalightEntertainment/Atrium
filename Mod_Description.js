@@ -10,5 +10,8 @@ const Mod_Description_Data = [
     { picture: "./GFX/Description/Steamed_Egg.png" },
     { picture: "./GFX/Description/Tom Yum Goong.png" },
     { picture: "./GFX/Description/YumMaMuang.png" },
+    { picture: "./GFX/Description/ShinsGuitarCase.png" },
+    { picture: "./GFX/Description/ShinsRobotics.png" },
+    { picture: "./GFX/Description/ShinsThaiCuisine.png" },
     { picture: "./GFX/Description/Shins_NameBar.png" }
 ];
