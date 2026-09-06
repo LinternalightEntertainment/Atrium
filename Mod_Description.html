@@ -21,8 +21,84 @@
     <section id="DevLog" class="MainA-section">
         <h2 class="section-title">Development Logs</h2>
         <p class="section-subtitle">พื้นที่สำหรับการโพสต์ถึงการพัฒนาเกมที่เกิดขึ้น</p>
-        
-        <div class="DevLog-grid" id="devlog-container-link-toScript"></div>
+
+        <div class="DevLog-grid" id="devlog-container-link-toScript">
+            <div class="DevLog-card">
+                <div class="DevLog-img">
+                    <img src="./GFX/Description/FriedEgg.png" alt="Fried Egg">
+                </div>
+            </div>
+            <div class="DevLog-card">
+                <div class="DevLog-img">
+                    <img src="./GFX/Description/Kapi.png" alt="Kapi">
+                </div>
+            </div>
+            <div class="DevLog-card">
+                <div class="DevLog-img">
+                    <img src="./GFX/Description/MooKrob.png" alt="Moo Krob">
+                </div>
+            </div>
+            <div class="DevLog-card">
+                <div class="DevLog-img">
+                    <img src="./GFX/Description/Moo_Ping.png" alt="Moo Ping">
+                </div>
+            </div>
+            <div class="DevLog-card">
+                <div class="DevLog-img">
+                    <img src="./GFX/Description/PadKrapaoMooKrob.png" alt="Pad Krapao Moo Krob">
+                </div>
+            </div>
+            <div class="DevLog-card">
+                <div class="DevLog-img">
+                    <img src="./GFX/Description/Pad_Thai.png" alt="Pad Thai">
+                </div>
+            </div>
+            <div class="DevLog-card">
+                <div class="DevLog-img">
+                    <img src="./GFX/Description/Pa_Lo.png" alt="Pa Lo">
+                </div>
+            </div>
+            <div class="DevLog-card">
+                <div class="DevLog-img">
+                    <img src="./GFX/Description/Saamkler.png" alt="Saamkler">
+                </div>
+            </div>
+            <div class="DevLog-card">
+                <div class="DevLog-img">
+                    <img src="./GFX/Description/ShinsGuitarCase.png" alt="Shins Guitar Case">
+                </div>
+            </div>
+            <div class="DevLog-card">
+                <div class="DevLog-img">
+                    <img src="./GFX/Description/ShinsRobotics.png" alt="Shins Robotics">
+                </div>
+            </div>
+            <div class="DevLog-card">
+                <div class="DevLog-img">
+                    <img src="./GFX/Description/ShinsThaiCuisine.png" alt="Shins Thai Cuisine">
+                </div>
+            </div>
+            <div class="DevLog-card">
+                <div class="DevLog-img">
+                    <img src="./GFX/Description/Shins_NameBar.png" alt="Shins Name Bar">
+                </div>
+            </div>
+            <div class="DevLog-card">
+                <div class="DevLog-img">
+                    <img src="./GFX/Description/Steamed_Egg.png" alt="Steamed Egg">
+                </div>
+            </div>
+            <div class="DevLog-card">
+                <div class="DevLog-img">
+                    <img src="./GFX/Description/Tom%20Yum%20Goong.png" alt="Tom Yum Goong">
+                </div>
+            </div>
+            <div class="DevLog-card">
+                <div class="DevLog-img">
+                    <img src="./GFX/Description/YumMaMuang.png" alt="Yum Ma Muang">
+                </div>
+            </div>
+        </div>
 
     </section>
 
@@ -31,29 +107,5 @@
     </footer>
 
 </body>
-
-<script src="./Mod_Description.js"></script>
-
-<script>
-    function renderMod_Description() {
-        const container = document.getElementById(
-            'devlog-container-link-toScript'
-        );
-
-        container.innerHTML = '';
-
-        Mod_Description_Data.forEach(post => {
-            container.innerHTML += `
-                <div class="DevLog-card">
-                    <div class="DevLog-img">
-                        <img src="${post.picture}">
-                    </div>
-                </div>
-            `;
-        });
-    }
-
-    renderMod_Description();
-</script>
 
 </html>
