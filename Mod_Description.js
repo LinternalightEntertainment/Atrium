@@ -9,5 +9,6 @@ const Mod_Description_Data = [
     { picture: "./GFX/Description/Saamkler.png" },
     { picture: "./GFX/Description/Steamed_Egg.png" },
     { picture: "./GFX/Description/Tom Yum Goong.png" },
-    { picture: "./GFX/Description/YumMaMuang.png" }
+    { picture: "./GFX/Description/YumMaMuang.png" },
+    { picture: "./GFX/Description/Shins_NameBar.png" }
 ];
